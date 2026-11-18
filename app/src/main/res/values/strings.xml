@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">面部分析</string>
+    <string name="home_intro">选一张清晰的单人照，查看人脸检测和特征测量结果。</string>
+    <string name="photo_privacy">照片仅在本机处理。</string>
+    <string name="choose_photo">从相册选图</string>
+    <string name="open_camera">打开相机</string>
+    <string name="back_home">返回首页</string>
+    <string name="camera_loading">正在启动相机…</string>
+    <string name="camera_preview">相机预览</string>
+    <string name="camera_waiting_for_face">请让一张人脸进入取景框</string>
+    <string name="camera_single_face">已检测到一张人脸</string>
+    <string name="camera_multiple_faces">检测到多张人脸，请调整取景</string>
+    <string name="take_photo">拍照并分析</string>
+    <string name="taking_photo">正在拍照…</string>
+    <string name="analyzing">正在检测照片中的人脸…</string>
+    <string name="analysis_error_title">未能完成分析</string>
+    <string name="camera_permission_denied">相机权限未开启。你可以在系统设置中允许相机权限，或从相册选图。</string>
+    <string name="camera_unavailable">无法启动摄像头，请检查设备是否有可用摄像头，或改用相册。</string>
+    <string name="capture_failed">拍照失败，请重新打开相机或改用相册。</string>
+    <string name="no_face">没有检测到人脸，请换一张清晰的正脸照片。</string>
+    <string name="multiple_faces">检测到多张人脸，请选择只有一张人脸的照片。</string>
+    <string name="face_outside_photo">人脸不在照片有效范围内，请重新取景。</string>
+    <string name="analysis_failed">无法读取或分析这张照片，请重新选图或拍照。</string>
+    <string name="result_title">分析结果</string>
+    <string name="analyzed_photo">已分析的照片</string>
+    <string name="sample_score">示例分数</string>
+    <string name="model_score">模型评分</string>
+    <string name="sample_description">用于演示结果页，来自固定示例值。</string>
+    <string name="score_format">%1$.1f / %2$d</string>
+    <string name="measurements">面部测量</string>
+    <string name="eye_ratio_format">双眼间距 / 人脸框宽度　%1$.1f%%</string>
+    <string name="eye_ratio_unavailable">双眼间距 / 人脸框宽度　无法测量</string>
+    <string name="yaw_format">头部水平转角　%1$.1f°</string>
+    <string name="mouth_ratio_format">嘴角间距 / 人脸框宽度　%1$.1f%%</string>
+    <string name="nose_ratio_format">鼻底至下唇 / 人脸框高度　%1$.1f%%</string>
+    <string name="roll_format">头部侧倾　%1$.1f°</string>
+    <string name="measurements_note">金色标记来自人脸关键点。下方读数用于描述照片中的面部比例和姿态，模型没有将这些读数作为单独的打分项。</string>
+    <string name="camera_heading">实时取景</string>
+    <string name="back_with_arrow">‹  返回首页</string>
+    <string name="live_score_empty">— / 5</string>
+    <string name="auth_username">用户名</string>
+    <string name="auth_password">密码</string>
+</resources>

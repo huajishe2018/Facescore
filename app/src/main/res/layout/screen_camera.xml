@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:accessibilityHeading="true"
+        android:id="@+id/camera_title"
+        android:text="@string/camera_heading"
+        android:textColor="@color/ink"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/preview_background"
+        android:clipToOutline="true"
+        android:padding="2dp">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/camera_preview" />
+
+        <com.example.facescore.FaceOverlay
+            android:id="@+id/face_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/live_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:text="@string/live_score_empty"
+        android:textColor="@color/accent"
+        android:textSize="44sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/camera_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:accessibilityLiveRegion="polite"
+        android:background="@drawable/panel_background"
+        android:padding="14dp"
+        android:text="@string/camera_loading"
+        android:textColor="@color/secondary_text"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/take_photo"
+        style="@style/FaceScorePrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="@string/take_photo" />
+</LinearLayout>

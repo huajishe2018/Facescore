@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0C1022</color>
+    <color name="ink">#FFF0D0</color>
+    <color name="secondary_text">#CEC1DA</color>
+    <color name="accent">#EFCD83</color>
+    <color name="panel">#18192F</color>
+    <color name="face_outline">#FFE09A</color>
+    <color name="preview_background">#0C1022</color>
+
+    <style name="Theme.FaceScore" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="FaceScorePrimaryButton" parent="android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/primary_action</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/primary_action_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+
+    <style name="FaceScoreSecondaryButton" parent="android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/secondary_action</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+
+    <style name="FaceScorePanel">
+        <item name="android:background">@drawable/panel_background</item>
+        <item name="android:padding">20dp</item>
+    </style>
+</resources>

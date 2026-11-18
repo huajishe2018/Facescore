@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+def backendUrl = providers.gradleProperty('facescoreBackendUrl')
+        .getOrElse('https://example.com/facescore')
+if (!(backendUrl ==~ /https:\/\/[A-Za-z0-9.:-]+(?:\/[A-Za-z0-9_-]+)*/)) {
+    throw new GradleException('facescoreBackendUrl must be an HTTPS base URL without a trailing slash')
+}
+
+android {
+    namespace 'com.example.facescore'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.example.facescore'
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0'
+        buildConfigField 'String', 'FACESCORE_BACKEND_URL', '"' + backendUrl + '"'
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    def cameraX = '1.4.2'
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.9.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-core:2.9.0'
+    implementation "androidx.camera:camera-camera2:${cameraX}"
+    implementation "androidx.camera:camera-lifecycle:${cameraX}"
+    implementation "androidx.camera:camera-view:${cameraX}"
+    implementation "androidx.camera:camera-mlkit-vision:${cameraX}"
+    implementation 'com.google.mlkit:face-detection:16.1.7'
+    implementation 'com.google.ai.edge.litert:litert:1.4.2'
+}
+
+

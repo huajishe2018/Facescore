@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101b">
+  <meta name="description" content="下载 FaceScore 安卓版，体验实时颜值打分和照片锐评。">
+  <title>FaceScore · 安卓下载</title>
+  <style>
+    :root { color-scheme: dark; --ink: #f8ebd4; --muted: #d0bed0; --gold: #e9bb78; --line: #b08a5569; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: #10101b; font: 16px/1.65 system-ui, "Microsoft YaHei", sans-serif; }
+    main { width: min(1120px, 100% - 40px); margin: auto; }
+    header { min-height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; letter-spacing: .06em; font: 24px Georgia, serif; }
+    .brand span { color: var(--gold); font-size: 29px; }
+    .platform { color: var(--muted); font-size: 14px; }
+    .hero { min-height: 520px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(25px, 5vw, 70px); padding: 48px 0; }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: clamp(40px, 6vw, 76px); line-height: 1.14; letter-spacing: -.065em; }
+    h1 span { display: block; color: var(--gold); font-family: Georgia, serif; font-weight: 400; font-style: italic; letter-spacing: -.04em; }
+    .lead { max-width: 28em; color: var(--muted); margin: 22px 0 26px; }
+    .download { display: inline-flex; align-items: center; gap: 14px; padding: 12px 22px; border: 1px solid #ffe1a6; border-radius: 4px; background: linear-gradient(115deg,#f1ca91,#cf9654); color: #21121d; font-weight: 750; text-decoration: none; }
+    .download:hover { background: #ffe0a8; }
+    .download:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+    .metadata { margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .art { display: grid; place-items: center; position: relative; min-width: 0; aspect-ratio: 1; isolation: isolate; border: 1px solid var(--line); border-radius: 50% 50% 8px 8px; background: radial-gradient(ellipse at 50% 55%, #48283c 0%, #241b35 49%, #171323 78%); overflow: hidden; }
+    .art::before { content: ""; position: absolute; inset: 13px; border-radius: inherit; border: 1px solid #b08a5538; }
+    .wheel { width: 76%; aspect-ratio: 1; border: 1px solid var(--gold); border-radius: 50%; position: relative; display: grid; place-items: center; box-shadow: 0 0 40px #e9bb7820, inset 0 0 0 6px #21192d, inset 0 0 0 7px var(--line); }
+    .wheel::before { content: ""; position: absolute; inset: 9%; border: 1px solid var(--line); border-radius: 50%; background: repeating-conic-gradient(from -1deg, #e9bb7899 0 1deg, transparent 1deg 15deg); mask: radial-gradient(farthest-side, transparent 92%, #000 93%); }
+    .wheel::after { content: ""; position: absolute; inset: 18%; border: 1px solid var(--line); border-radius: 50%; }
+    .sun { width: 57%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: repeating-conic-gradient(from -3deg,#d69c5b 0 3deg,transparent 3deg 15deg); }
+    .sun::before { content: "✦"; display: grid; place-items: center; width: 66%; aspect-ratio: 1; color: #f7d394; font-size: clamp(30px, 8vw, 92px); line-height: 1; border: 1px solid #f7d394; border-radius: 50%; background: radial-gradient(#774649,#352039 74%); box-shadow: 0 0 0 8px #342238; }
+    .star { position: absolute; color: var(--gold); font-size: clamp(12px, 2.7vw, 32px); }
+    .star.a { top: 8%; left: 48%; } .star.b { left: 7%; top: 46%; } .star.c { right: 7%; top: 46%; } .star.d { bottom: 7%; left: 48%; }
+    .instructions { border-block: 1px solid var(--line); padding: 24px 0 30px; margin-bottom: 34px; }
+    h2 { font-size: 23px; }
+    ol { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; padding-left: 1.4em; color: var(--muted); margin-bottom: 0; }
+    li { padding-left: 5px; }
+    li::marker { color: var(--gold); font-family: Georgia, serif; }
+    .wechat { margin-top: 17px; color: var(--gold); font-size: 14px; }
+    @media (max-width: 680px) {
+      header { min-height: 60px; }
+      .hero { grid-template-columns: 1fr; padding: 32px 0; }
+      .art { max-width: 420px; width: 100%; justify-self: center; }
+      .download { width: 100%; justify-content: center; }
+      ol { grid-template-columns: 1fr; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand"><span aria-hidden="true">✦</span> FaceScore</div>
+      <div class="platform">Android 9 及以上</div>
+    </header>
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <h1 id="title"><span>FaceScore</span>面部分析</h1>
+        <p class="lead">选一张照片或打开相机实时打分。想听具体建议，还可以用照片锐评了解上镜印象和造型风格。</p>
+        <a class="download" href="FaceScore.apk" download>下载 Android APK <span aria-hidden="true">↓</span></a>
+        <p class="metadata">安装包约 73 MB · 课程设计体验版</p>
+        <p id="wechat" class="wechat" hidden>微信里无法下载时，点右上角「···」并选择「在浏览器打开」。</p>
+      </div>
+      <div class="art" aria-hidden="true">
+        <span class="star a">✦</span><span class="star b">✧</span><span class="star c">✧</span><span class="star d">✦</span>
+        <div class="wheel"><div class="sun"></div></div>
+      </div>
+    </section>
+    <section class="instructions" aria-labelledby="install">
+      <h2 id="install">安装与使用</h2>
+      <ol>
+        <li>用安卓手机的浏览器下载 APK。</li>
+        <li>下载完成后点开安装。若系统询问，允许当前浏览器安装此应用。</li>
+        <li>打开 FaceScore，注册或登录后，选择打分或锐评。</li>
+      </ol>
+    </section>
+  </main>
+  <script>
+    if (/MicroMessenger/i.test(navigator.userAgent)) {
+      document.getElementById("wechat").hidden = false;
+    }
+  </script>
+</body>
+</html>
