@@ -1,7 +1,5 @@
 # 面部分析 Android 课程设计
 
-> 公开版本：不包含课程报告、测试证据、个人截图和真实服务器地址；默认后端地址为占位符 `https://example.com/facescore`。
-
 Java 17 和 XML 布局。启动先登录或注册，再进入颜值打分或照片锐评。相机预览使用 CameraX，端侧人脸检测使用随 APK 打包的 ML Kit 模型。
 
 ## 在 Android Studio 中运行
